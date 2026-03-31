@@ -1,0 +1,130 @@
+.task-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0 8px;
+}
+
+.task-list-header h1 {
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  font-size: 24px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.task-list-header p {
+  color: var(--text-tertiary);
+  margin: 0;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: 3px;
+  box-shadow: var(--shadow-sm);
+  flex-wrap: wrap;
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 13px;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.filter-group select {
+  padding: 6px 10px;
+  border: 2px solid var(--border-color);
+  border-radius: 3px;
+  font-size: 13px;
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  min-width: 140px;
+  transition: all 0.2s ease;
+}
+
+.filter-group select:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-hover);
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: var(--bg-secondary);
+  box-shadow: 0 0 0 2px rgba(38, 132, 255, 0.2);
+}
+
+[data-theme="dark"] .filter-group select:focus {
+  box-shadow: 0 0 0 2px rgba(76, 154, 255, 0.3);
+}
+
+.loading,
+.no-tasks {
+  text-align: center;
+  padding: 48px;
+  background: var(--bg-secondary);
+  border-radius: 3px;
+  color: var(--text-tertiary);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.no-tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.no-tasks::before {
+  content: '📝';
+  font-size: 48px;
+  opacity: 0.5;
+}
+
+.tasks-grid {
+  display: grid;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .task-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    width: 100%;
+  }
+
+  .filter-group select {
+    flex: 1;
+    min-width: auto;
+  }
+}
+

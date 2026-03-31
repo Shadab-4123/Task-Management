@@ -1,0 +1,84 @@
+.subtask-form-wrapper {
+  margin: 12px 0;
+  padding: 16px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.subtask-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subtask-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.subtask-form-header h4 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.subtask-form-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.subtask-form .form-group {
+  margin-bottom: 12px;
+}
+
+.subtask-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.subtask-form label {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.subtask-form input,
+.subtask-form select,
+.subtask-form textarea {
+  font-size: 13px;
+  padding: 6px 10px;
+}
+
+.subtask-form .date-picker-input {
+  font-size: 13px;
+  padding: 6px 10px;
+}
+
+@media (max-width: 768px) {
+  .subtask-form .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .subtask-form-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .subtask-form-actions {
+    width: 100%;
+  }
+
+  .subtask-form-actions .btn {
+    flex: 1;
+  }
+}
+
+
