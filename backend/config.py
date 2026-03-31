@@ -78,6 +78,8 @@ class Config:
     # -----------------------------
     SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret-key")
     DEBUG = os.getenv("FLASK_DEBUG", "False").lower() == "true"
+    SESSION_COOKIE_SAMESITE = os.getenv("SESSION_COOKIE_SAMESITE", "Lax")
+    SESSION_COOKIE_SECURE = os.getenv("SESSION_COOKIE_SECURE", "False").lower() == "true"
 
     # -----------------------------
     # CORS CONFIG
